@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!-- 
+  Archivo: index.html
+  Propósito: Estructura HTML con soporte 100% Mobile Responsive, Menú Hamburguesa y QR Ready.
+  Autor: Manashtov
+-->
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Manuel Calderón | Desarrollador Fullstack & Python</title>
+    
+    <!-- CSS Modular -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/themes.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">Manashtov<span class="accent">_</span></div>
+            
+            <!-- Enlaces de Navegación (Desktop y Móvil colapsable) -->
+            <nav id="nav-menu" class="nav-links">
+                <a href="#about" class="nav-item" data-i18n="nav_about">Sobre mí</a>
+                <a href="#skills" class="nav-item" data-i18n="nav_skills">Stack Tecnológico</a>
+                <a href="#projects" class="nav-item" data-i18n="nav_projects">Proyectos</a>
+                <a href="#contact" class="nav-item" data-i18n="nav_contact">Contacto</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Toggle Idioma -->
+                <button id="lang-toggle" class="btn-icon lang-btn" aria-label="Switch language">
+                    <span id="lang-icon">
+                        <img src="assets/img/GBP.png" alt="UK Flag" class="lang-flag"> <span>EN</span>
+                    </span>
+                </button>
+
+                <!-- Toggle Tema -->
+                <button id="theme-toggle" class="btn-icon" aria-label="Cambiar tema">
+                    <svg id="icon-sun" class="theme-icon hidden" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="23"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg id="icon-moon" class="theme-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+
+                <!-- Botón Hamburguesa Móvil -->
+                <button id="menu-toggle" class="btn-icon menu-btn" aria-label="Abrir menú">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overlay para oscurecer el fondo cuando se abre el menú móvil -->
+    <div id="nav-overlay" class="nav-overlay"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section fade-in">
+            <p class="greeting" data-i18n="hero_greeting">Hola, mi nombre es</p>
+            <h1 class="hero-title">Manuel Calderón.</h1>
+            <h2 class="hero-subtitle" data-i18n="hero_subtitle">Construyo soluciones de software robustas.</h2>
+            <p class="hero-bio" data-i18n="hero_bio">
+                Analista programador especializado en automatización con Python, con certificación de Google. Construyo software de escritorio, aplicaciones móviles, proyectos con IA y pipelines CI/CD.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_projects">Ver mis proyectos</a>
+                <a href="https://github.com/Manashtov" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="hero_btn_github">Visitar GitHub</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section fade-in">
+            <h2 class="section-title" data-i18n="about_title">Sobre mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-i18n="about_p1">Soy Manuel <strong>"Manashtov"</strong> Calderón, Analista Programador titulado de Duoc UC (2025) y certificado por Google en IT Automation with Python (2026).</p>
+                    <p data-i18n="about_p2">Me especializo en automatización con Python, desarrollo de software de escritorio por capas, aplicaciones móviles y proyectos que integran IA. Implemento prácticas de Integración y Despliegue Continuo (CI/CD) usando GitHub Actions para asegurar entregas confiables. Me obsesiona la arquitectura limpia y resolver problemas reales con tecnología.</p>
+                    
+                    <h3 class="subsection-title" data-i18n="about_edu_title">Educación y Certificaciones</h3>
+                    <ul class="education-list">
+                        <li>
+                            <strong data-i18n="edu_1_title">Analista Programador</strong> — Duoc UC, Chile 🇨🇱 <span data-i18n="edu_1_date">(Titulado 2025)</span>
+                        </li>
+                        <li>
+                            <strong>Google IT Automation with Python</strong> — <span data-i18n="edu_2_title">Certificación Profesional de Google</span> (2026)
+                            <a href="https://coursera.org/share/0b9376ed206f4a90b6a7a0d66e3a60dc" target="_blank" rel="noopener" class="cert-link bold-link" data-i18n="verify_cert">Verificar credencial ↗</a>
+                            <div class="chips-container cert-skills">
+                                <span class="chip chip-small chip-bold">Python</span>
+                                <span class="chip chip-small chip-bold">Git/GitHub</span>
+                                <span class="chip chip-small chip-bold">CI/CD</span>
+                                <span class="chip chip-small chip-bold">Puppet</span>
+                                <span class="chip chip-small chip-bold" data-i18n="skill_testing">Testing & Debugging</span>
+                                <span class="chip chip-small chip-bold" data-i18n="skill_regex">Expresiones Regulares</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stack Tecnológico -->
+        <section id="skills" class="skills-section fade-in">
+            <h2 class="section-title" data-i18n="skills_title">Stack Tecnológico</h2>
+            <p class="skills-intro" data-i18n="skills_intro">Conjunto de lenguajes, frameworks, herramientas y modelos de inteligencia artificial con los que diseño y construyo soluciones:</p>
+            
+            <div class="skills-grid">
+                <div class="skill-category-card">
+                    <div class="skill-cat-header">
+                        <span class="skill-icon">⚙️</span>
+                        <h3 data-i18n="skills_cat_backend">Backend & Software</h3>
+                    </div>
+                    <ul class="skill-pill-list">
+                        <li class="skill-pill">Python</li>
+                        <li class="skill-pill">Flask</li>
+                        <li class="skill-pill">Django</li>
+                        <li class="skill-pill">SQL</li>
+                        <li class="skill-pill" data-i18n="skill_rest">APIs RESTful</li>
+                        <li class="skill-pill" data-i18n="skill_api_consume">Consumo de APIs</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category-card">
+                    <div class="skill-cat-header">
+                        <span class="skill-icon">📱</span>
+                        <h3 data-i18n="skills_cat_frontend">Frontend & Mobile</h3>
+                    </div>
+                    <ul class="skill-pill-list">
+                        <li class="skill-pill">Ionic</li>
+                        <li class="skill-pill">Vue.js</li>
+                        <li class="skill-pill">TypeScript</li>
+                        <li class="skill-pill">JavaScript (ES6+)</li>
+                        <li class="skill-pill">HTML5</li>
+                        <li class="skill-pill">CSS3</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category-card">
+                    <div class="skill-cat-header">
+                        <span class="skill-icon">🧠</span>
+                        <h3 data-i18n="skills_cat_ai">IA & Integraciones</h3>
+                    </div>
+                    <ul class="skill-pill-list">
+                        <li class="skill-pill">Gemini AI</li>
+                        <li class="skill-pill">Claude AI</li>
+                        <li class="skill-pill">DeepSeek AI</li>
+                        <li class="skill-pill">Clerk Auth</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category-card">
+                    <div class="skill-cat-header">
+                        <span class="skill-icon">🚀</span>
+                        <h3 data-i18n="skills_cat_devops">DevOps & Flujo de Trabajo</h3>
+                    </div>
+                    <ul class="skill-pill-list">
+                        <li class="skill-pill">CI/CD Pipelines</li>
+                        <li class="skill-pill">GitHub Actions</li>
+                        <li class="skill-pill">Git / GitHub</li>
+                        <li class="skill-pill" data-i18n="skill_architecture">Arquitectura por Capas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section fade-in">
+            <h2 class="section-title" data-i18n="projects_title">Proyectos Destacados</h2>
+            <p class="projects-intro" data-i18n="projects_intro">Proyectos de software automatizados en Python, plataformas web con API REST y aplicaciones móviles.</p>
+            <div id="projects-grid" class="projects-grid"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer fade-in">
+        <div class="footer-content">
+            <h2 class="footer-title" data-i18n="footer_title">Mantengámonos en contacto</h2>
+            <p data-i18n="footer_desc">Siempre abierto a nuevos desafíos y oportunidades profesionales.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-label">Emails:</span>
+                    <button class="copy-email-btn bold-link" data-email="mana.calderon@protonmail.com">mana.calderon@protonmail.com</button>
+                    <button class="copy-email-btn bold-link" data-email="manashtov@protonmail.com">manashtov@protonmail.com</button>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label" data-i18n="footer_phone">Teléfono:</span>
+                    <span class="bold-link">🇨🇱 +56 9 XXXX XXXX</span>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <p data-i18n="footer_made">Diseñado y desarrollado con 💙 por Manashtov — Chile 🇨🇱</p>
+                <p class="copyright">© <span id="current-year"></span> | <a href="https://github.com/Manashtov" target="_blank" rel="noopener" class="bold-link">GitHub</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Volver Arriba -->
+    <button id="scroll-top-btn" class="scroll-top-btn hidden" aria-label="Volver arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden" aria-live="polite" aria-atomic="true">✓ Email copiado al portapapeles</div>
+
+    <!-- Modal de Proyecto -->
+    <dialog id="project-modal" class="modal">
+        <div class="modal-content">
+            <button id="modal-close" class="btn-icon close-btn" aria-label="Cerrar modal">✕</button>
+            <div class="modal-body">
+                <div class="gallery-wrapper">
+                    <div class="gallery-main-view">
+                        <button id="gal-prev" class="gallery-arrow arrow-left" aria-label="Imagen anterior">‹</button>
+                        <div class="gallery-img-container" title="Haz clic para ver en pantalla completa">
+                            <img id="modal-img" src="" alt="Captura del proyecto" class="modal-image">
+                            <span class="zoom-badge">🔍 Ampliar</span>
+                        </div>
+                        <button id="gal-next" class="gallery-arrow arrow-right" aria-label="Siguiente imagen">›</button>
+                    </div>
+                    <div id="modal-thumbnails" class="gallery-thumbnails"></div>
+                </div>
+
+                <h3 id="modal-title" class="modal-title"></h3>
+                <p id="modal-desc" class="modal-desc project-desc-modal"></p>
+                <div id="modal-tech" class="chips-container modal-chips"></div>
+                <a id="modal-link" href="#" target="_blank" rel="noopener" class="btn btn-primary modal-btn" data-i18n="modal_btn_repo">Ver Repositorio</a>
+            </div>
+            
+            <div class="modal-nav">
+                <button id="modal-prev" class="btn-nav" data-i18n="modal_btn_prev">← Anterior</button>
+                <button id="modal-next" class="btn-nav" data-i18n="modal_btn_next">Siguiente →</button>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Lightbox Modal -->
+    <dialog id="lightbox-modal" class="lightbox">
+        <div class="lightbox-content">
+            <!-- Flechas de navegación del Lightbox -->
+            <button id="lightbox-prev" class="lightbox-arrow left" aria-label="Imagen anterior">‹</button>
+            <img id="lightbox-img" src="" alt="Vista ampliada" class="lightbox-img">
+            <button id="lightbox-next" class="lightbox-arrow right" aria-label="Siguiente imagen">›</button>
+            
+            <button id="lightbox-close" class="btn-icon lightbox-close" aria-label="Cerrar ampliación">✕</button>
+        </div>
+    </dialog>
+
+    <!-- Scripts Modulares -->
+    <script defer src="js/i18n.js"></script>
+    <script defer src="js/projects-data.js"></script>
+    <script defer src="js/render-projects.js"></script>
+    <script defer src="js/theme-toggle.js"></script>
+    <script defer src="js/scroll-effects.js"></script>
+    <script defer src="js/email-copy.js"></script>
+    <script defer src="js/main.js"></script>
+</body>
+</html>

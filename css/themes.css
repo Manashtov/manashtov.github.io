@@ -1,0 +1,23 @@
+/* 
+    Archivo: css/themes.css
+    Propósito: Sobrescritura de variables para el modo claro.
+    Autor: Manashtov
+*/
+
+[data-theme="light"] {
+    /* Inversión de paleta para modo claro */
+    --bg-color: #f5f8fc;
+    --surface-color: #ffffff;
+    --surface-hover: #f0f4f8;
+    
+    /* Textos oscurecidos para contraste */
+    --text-primary: #0a1929;
+    --text-secondary: #4a6582;
+    
+    /* Bordes más suaves */
+    --border-color: #d0e2f5;
+    
+    /* Sombras adaptadas a fondos claros */
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 8px 30px rgba(51, 153, 255, 0.2);
+}

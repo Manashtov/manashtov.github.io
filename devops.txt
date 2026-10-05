@@ -1,0 +1,26 @@
+1. Pipelines de CI/CD con GitHub Actions (en CLZip y Conver6)
+
+    Lo que hace un desarrollador común: Escribe el código en Python, abre una terminal en su máquina, corre PyInstaller a mano, abre Inno Setup, compila el ejecutable, crea el .zip y lo sube manualmente a los Releases de GitHub.
+
+    Lo que hice (DevOps real): Escribí flujos automatizados (.github/workflows/*.yml). Al hacer un push o crear una etiqueta de versión (tag), los servidores de GitHub levantaron una máquina virtual, instalaron las dependencias, ejecutaron pruebas, compilaron los binarios y empaquetaron los instaladores automáticamente. Eso es exactamente un pipeline de CI/CD de entrega continua.
+
+2. Infraestructura y Automatización de Sistemas (Certificación Google IT Automation)
+
+    En mi formación con Google aprendí herramientas como Puppet, scripting avanzado en Python y automatización de sistemas operativos.
+
+    Administrar configuraciones y entornos mediante código (en vez de hacer clic en configuraciones manuales) es el pilar de DevOps conocido como IaC (Infrastructure as Code).
+
+3. Automatización de Build e Instaladores (Inno Setup & PowerShell)
+
+    En CLZip, no entregué una carpeta desordenada con archivos sueltos. Escribí scripts de empaquetado para generar instaladores reproducibles para Windows. Estandarizar cómo se distribuye y ejecuta el software es tarea directa de ingeniería de operaciones/DevOps.
+
+
+¿Cómo explicárselo a un reclutador en una entrevista?
+
+Si preguntan por experiencia en DevOps, puedo responder con total seguridad:
+
+    "Mi experiencia en DevOps se centra en la automatización del ciclo de vida del software
+    mediante CI/CD con GitHub Actions. En proyectos como CLZip y Conver6, diseñé pipelines que automatizan
+    las pruebas, la compilación de binarios multiplataforma y la generación de instaladores listos para
+    producción con cada release. Además, cuento con bases de automatización de infraestructura y
+    configuración de entornos gracias a mi certificación de Google en IT Automation."

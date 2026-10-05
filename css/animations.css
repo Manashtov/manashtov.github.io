@@ -1,0 +1,29 @@
+/* 
+  Archivo: css/animations.css
+  Propósito: Definición de keyframes y clases de utilidad para animaciones.
+  Autor: Manashtov
+*/
+
+/* Cursor parpadeante para el logo */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Clases de utilidad para IntersectionObserver */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Cuando el JS detecta que está en pantalla, añade esta clase */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Helper para esconder elementos como SVGs que cambian por tema */
+.hidden {
+    display: none !important;
+}

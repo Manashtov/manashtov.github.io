@@ -1,0 +1,21 @@
+🚀 Cómo desplegarlo gratis en GitHub Pages
+Una vez que Gemini te genere todos los archivos:
+
+Crea un repositorio en GitHub llamado manashtov.github.io (reemplaza manashtov por tu usuario real de GitHub).
+El nombre debe ser exactamente ese para que GitHub lo reconozca como tu sitio principal.
+
+Sube todos los archivos que generó Gemini a ese repositorio
+(puedes arrastrarlos directamente en la interfaz web de GitHub o usar Git desde tu PC).
+
+Ve a la pestaña "Settings" de tu repositorio y baja hasta la sección "Pages".
+
+En "Source", selecciona la rama main (o master) y la carpeta /root. Guarda.
+
+Espera 1-2 minutos. GitHub te dará una URL tipo https://manashtov.github.io donde tu portafolio estará live.
+
+Prueba el sitio en esa URL desde tu celular y desde tu PC.
+Verifica que el modo claro/oscuro funcione, que los emails se copien, y que las tarjetas abran el modal.
+
+Con esto tienes un portafolio modular, comentado, azul profesional, con modo claro/oscuro, modal de proyectos,
+efectos hover, emails copiables y una guía en .txt para que puedas mantenerlo tú mismo.
+    ¡Éxito en la feria! 🇨🇱

@@ -1,0 +1,75 @@
+/* 
+  Archivo: css/base.css
+  Propósito: Reset CSS, estilos base del documento y tipografía global.
+  Autor: Manashtov
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    transition: background-color var(--transition-normal), color var(--transition-normal);
+    overflow-x: hidden;
+}
+
+/* Tipografía Base */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-primary);
+}
+
+a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--accent-secondary);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-primary);
+    border-radius: var(--radius-sm);
+}
+.no-scroll {
+    overflow: hidden !important;
+}

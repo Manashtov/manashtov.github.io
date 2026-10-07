@@ -1,6 +1,5 @@
 # manashtov.github.io
-
-https://manashtov.github.io/
+link: 
 https://manashtov.github.io/
 
  Manuel "Manashtov" Calderón Portafolio
@@ -17,5 +16,5 @@ https://manashtov.github.io/
 - Conver6 (conversor de archivos - Exclusivamente Python +  CI/CD github actions)
 - Conversor de temperaturas (Ionic + vuejs + Typescript)
 
-https://manashtov.github.io/
+link: 
 https://manashtov.github.io/

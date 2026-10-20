@@ -1,9 +1,3 @@
-/* 
-  Archivo: css/variables.css
-  Propósito: Sistema de diseño base. Uso de Custom Properties para fácil mantención.
-  Autor: Manashtov
-*/
-
 :root {
     /* Paleta Modo Oscuro (Por defecto) */
     --bg-color: #0a1929;

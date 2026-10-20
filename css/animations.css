@@ -1,9 +1,3 @@
-/* 
-  Archivo: css/animations.css
-  Propósito: Definición de keyframes y clases de utilidad para animaciones.
-  Autor: Manashtov
-*/
-
 /* Cursor parpadeante para el logo */
 @keyframes blink {
     0%, 100% { opacity: 1; }

@@ -1,9 +1,3 @@
-/* 
-  Archivo: js/render-projects.js
-  Propósito: Renderizado, solución de bug de strings SVG, y Lightbox con flechas y Swipe.
-  Autor: Manashtov
-*/
-
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementById('projects-grid');
     const modal = document.getElementById('project-modal');

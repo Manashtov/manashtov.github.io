@@ -1,9 +1,3 @@
-/* 
-    Archivo: css/themes.css
-    Propósito: Sobrescritura de variables para el modo claro.
-    Autor: Manashtov
-*/
-
 [data-theme="light"] {
     /* Inversión de paleta para modo claro */
     --bg-color: #f5f8fc;

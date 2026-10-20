@@ -1,9 +1,3 @@
-/* 
-  Archivo: js/theme-toggle.js
-  Propósito: Detección automática y control del modo claro/oscuro.
-  Autor: Manashtov
-*/
-
 document.addEventListener('DOMContentLoaded', () => {
     const themeBtn = document.getElementById('theme-toggle');
     const iconSun = document.getElementById('icon-sun');

@@ -1,9 +1,3 @@
-/* 
-  Archivo: js/projects-data.js
-  Propósito: Colección de datos de proyectos ordenados por prioridad técnica.
-  Autor: Manashtov
-*/
-
 const projectsData = [
     {
         id: 6,

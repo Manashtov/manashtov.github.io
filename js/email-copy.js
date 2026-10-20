@@ -1,7 +1,3 @@
-/* 
-  Archivo: js/email-copy.js
-*/
-
 document.addEventListener('DOMContentLoaded', () => {
     const copyBtns = document.querySelectorAll('.copy-email-btn');
     const toast = document.getElementById('toast');

@@ -1,9 +1,3 @@
-/* 
-  Archivo: js/scroll-effects.js
-  Propósito: Añade efectos sutiles de fade-in cuando los elementos entran al viewport.
-  Autor: Manashtov
-*/
-
 document.addEventListener('DOMContentLoaded', () => {
     // Seleccionar todos los elementos con la clase fade-in
     const faders = document.querySelectorAll('.fade-in');

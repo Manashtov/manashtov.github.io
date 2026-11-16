@@ -1,5 +1,21 @@
 const projectsData = [
     {
+        id: 7,
+        title: "Presupuestalo",
+        description: {
+            es: "Aplicación de escritorio para crear, calcular y emitir cotizaciones comerciales profesionales de forma autónoma y sin conexión a internet. Con generación de documentos PDF y códigos QR de verificación instantánea. Soporta múltiples monedas, temas claro/oscuro y exportación a planilla Excel.",
+            en: "Desktop application to create, calculate, and issue professional commercial quotes completely offline. Features PDF document generation and instant QR code verification. Supports multiple currencies, light/dark themes, and Excel export."
+        },
+        tech: ["Python", "PySide6", "QAwesome"],
+        link: "#",
+        images: [
+            "assets/projects/presupuestalo/1.png",
+            "assets/projects/presupuestalo/2.png",
+            "assets/projects/presupuestalo/3.png"
+        ],
+        status: { es: "Completado", en: "Completed" }
+    },
+    {
         id: 6,
         title: "ComparaCL",
         description: {

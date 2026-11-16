@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let width = canvas.width = window.innerWidth;
         let height = canvas.height = window.innerHeight;
 
-        // Cantidad de copos adaptada al tamaño de pantalla para cuidar el rendimiento
         const flakeCount = window.innerWidth < 768 ? 45 : 90;
         const snowflakes = [];
 
@@ -89,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 f.y += f.speedY;
                 f.x += f.speedX + Math.sin(f.swing) * 0.3;
 
-                // Reiniciar el copo cuando sale por abajo o por los lados
                 if (f.y > height + 5) {
                     f.y = -5;
                     f.x = Math.random() * width;
@@ -100,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ctx.beginPath();
                 ctx.arc(f.x, f.y, f.radius, 0, Math.PI * 2);
 
-                // Color adaptable: Blanco hielo en modo oscuro / Azul suave en modo claro
                 if (isLight) {
                     ctx.fillStyle = `rgba(51, 153, 255, ${f.opacity * 0.75})`;
                 } else {

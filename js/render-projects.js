@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentImageIndex = 0;
     let currentLang = document.documentElement.lang || 'es';
 
-    // SVG Codificado de forma segura para evitar romper el HTML (Solución Bug "Sin imagen")
     const fallbackSVG = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='100%25' height='100%25' fill='%23132f4c'/%3E%3Ctext x='50%25' y='50%25' fill='%2366b2ff' font-family='sans-serif' font-size='20' text-anchor='middle' dy='.3em'%3ESin imagen%3C/text%3E%3C/svg%3E";
 
     function getProjectImages(p) {
@@ -149,13 +148,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Navegación click (Galería y Lightbox)
     galPrev.addEventListener('click', (e) => { e.stopPropagation(); prevGalleryImage(); });
     galNext.addEventListener('click', (e) => { e.stopPropagation(); nextGalleryImage(); });
     lbPrev.addEventListener('click', (e) => { e.stopPropagation(); prevGalleryImage(); });
     lbNext.addEventListener('click', (e) => { e.stopPropagation(); nextGalleryImage(); });
 
-    // Navegación Teclado
     document.addEventListener('keydown', (e) => {
         if (modal.open || lightbox.open) {
             if (e.key === 'ArrowLeft') prevGalleryImage();
@@ -163,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Navegación Swipe
     let touchStartX = 0;
     let touchEndX = 0;
     function handleSwipe() {
@@ -175,7 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxImg.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, {passive: true});
     lightboxImg.addEventListener('touchend', e => { touchEndX = e.changedTouches[0].screenX; handleSwipe(); }, {passive: true});
 
-    // Abrir/Cerrar Lightbox
     imgContainer.addEventListener('click', () => {
         const images = getProjectImages(projectsData[currentProjectIndex]);
         if (images.length === 0) return;
@@ -185,7 +180,6 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxClose.addEventListener('click', () => lightbox.close());
     lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.close(); });
 
-    // Modales Generales
     modalClose.addEventListener('click', () => modal.close());
     modal.addEventListener('close', () => document.body.classList.remove('no-scroll'));
     modal.addEventListener('click', (e) => { if (e.target === modal) modal.close(); });

@@ -1,5 +1,6 @@
 const translations = {
     es: {
+        page_title: "Manuel Calderón | Desarrollador Fullstack & Python",
         nav_about: "Sobre mí",
         nav_skills: "Stack Tecnológico",
         nav_projects: "Proyectos",
@@ -32,18 +33,22 @@ const translations = {
         skill_rest: "APIs RESTful",
         skill_api_consume: "Consumo de APIs",
         skill_architecture: "Arquitectura por Capas",
+        skill_aes: "Cifrado AES-256",
+        skill_sha: "Validación SHA-256",
         projects_title: "Proyectos Destacados",
         projects_intro: "Proyectos de software automatizados en Python, plataformas web con API REST y aplicaciones móviles.",
         footer_title: "Mantengámonos en contacto",
         footer_desc: "Siempre abierto a nuevos desafíos y oportunidades profesionales.",
         footer_phone: "Teléfono:",
         footer_made: "Diseñado y desarrollado con 💙 por Manashtov — Chile 🇨🇱",
+        modal_zoom: "🔍 Ampliar",
         modal_btn_repo: "Ver Repositorio",
         modal_btn_prev: "← Anterior",
         modal_btn_next: "Siguiente →",
         toast_copied: "✓ Email copiado al portapapeles"
     },
     en: {
+        page_title: "Manuel Calderón | Fullstack & Python Developer",
         nav_about: "About me",
         nav_skills: "Tech Stack",
         nav_projects: "Projects",
@@ -76,12 +81,15 @@ const translations = {
         skill_rest: "RESTful APIs",
         skill_api_consume: "API Consumption",
         skill_architecture: "Layered Architecture",
+        skill_aes: "AES-256 Encryption",
+        skill_sha: "SHA-256 Validation",
         projects_title: "Featured Projects",
         projects_intro: "Automated Python software, REST API web platforms, and mobile applications.",
         footer_title: "Let's keep in touch",
         footer_desc: "Always open to new challenges and professional opportunities.",
         footer_phone: "Phone:",
         footer_made: "Designed and developed with 💙 by Manashtov — Chile 🇨🇱",
+        modal_zoom: "🔍 Enlarge",
         modal_btn_repo: "View Repository",
         modal_btn_prev: "← Previous",
         modal_btn_next: "Next →",
@@ -110,6 +118,10 @@ document.addEventListener('DOMContentLoaded', () => {
         htmlEl.lang = lang;
         localStorage.setItem('language', lang);
         
+        if (translations[lang] && translations[lang].page_title) {
+            document.title = translations[lang].page_title;
+        }
+
         if (lang === 'es') {
             langIcon.innerHTML = `<img src="assets/img/GBP.png" alt="UK Flag" class="lang-flag"> <span>EN</span>`;
         } else {

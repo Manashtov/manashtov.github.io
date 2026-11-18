@@ -23,7 +23,25 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentImageIndex = 0;
     let currentLang = document.documentElement.lang || 'es';
 
-    const fallbackSVG = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='100%25' height='100%25' fill='%23132f4c'/%3E%3Ctext x='50%25' y='50%25' fill='%2366b2ff' font-family='sans-serif' font-size='20' text-anchor='middle' dy='.3em'%3ESin imagen%3C/text%3E%3C/svg%3E";
+    function getFallbackSVG() {
+        const text = currentLang === 'es' ? 'Sin imagen' : 'No image';
+        return `data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='100%25' height='100%25' fill='%23132f4c'/%3E%3Ctext x='50%25' y='50%25' fill='%2366b2ff' font-family='sans-serif' font-size='20' text-anchor='middle' dy='.3em'%3E${encodeURIComponent(text)}%3C/text%3E%3C/svg%3E`;
+    }
+
+    function getProjectTitle(p) {
+        if (typeof p.title === 'object' && p.title !== null) {
+            return p.title[currentLang] || p.title.es;
+        }
+        return p.title;
+    }
+
+    function getProjectTech(p) {
+        if (Array.isArray(p.tech)) return p.tech;
+        if (typeof p.tech === 'object' && p.tech !== null) {
+            return p.tech[currentLang] || p.tech.es || [];
+        }
+        return [];
+    }
 
     function getProjectImages(p) {
         if (Array.isArray(p.images) && p.images.length > 0) return p.images;
@@ -39,12 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderCards() {
         grid.innerHTML = '';
+        const fallbackSVG = getFallbackSVG();
+
         projectsData.forEach((project, index) => {
+            const titleText = getProjectTitle(project);
             const statusText = project.status[currentLang];
             const isPlaceholder = project.status.es !== "Completado";
             const cardClass = isPlaceholder ? 'project-card card-placeholder' : 'project-card';
             
-            const techChips = project.tech.map(t => `<span class="chip chip-small chip-bold">${t}</span>`).join('');
+            const techList = getProjectTech(project);
+            const techChips = techList.map(t => `<span class="chip chip-small chip-bold">${t}</span>`).join('');
             const images = getProjectImages(project);
             const coverSrc = images.length > 0 ? images[0] : fallbackSVG;
 
@@ -55,10 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
             card.innerHTML = `
                 <div class="project-image-container">
                     <span class="project-status">${statusText}</span>
-                    <img src="${coverSrc}" alt="${project.title}" draggable="false" onerror="this.src='${fallbackSVG}'">
+                    <img src="${coverSrc}" alt="${titleText}" draggable="false" onerror="this.src='${fallbackSVG}'">
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">${project.title}</h3>
+                    <h3 class="project-title">${titleText}</h3>
                     <p class="project-desc">${project.description[currentLang].substring(0, 85)}...</p>
                     <div class="chips-container">${techChips}</div>
                 </div>
@@ -73,10 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
         currentProjectIndex = index;
         currentImageIndex = 0;
         const p = projectsData[index];
+        const techList = getProjectTech(p);
         
-        modalTitle.textContent = p.title;
+        modalTitle.textContent = getProjectTitle(p);
         modalDesc.textContent = p.description[currentLang];
-        modalTech.innerHTML = p.tech.map(t => `<span class="chip chip-bold">${t}</span>`).join('');
+        modalTech.innerHTML = techList.map(t => `<span class="chip chip-bold">${t}</span>`).join('');
         
         if (p.link && p.link !== "#") {
             modalLink.href = p.link;
@@ -93,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateGalleryView(project) {
         const images = getProjectImages(project);
+        const fallbackSVG = getFallbackSVG();
         thumbsContainer.innerHTML = '';
 
         if (images.length === 0) {
@@ -114,11 +138,12 @@ document.addEventListener('DOMContentLoaded', () => {
         modalImg.onerror = () => { modalImg.src = fallbackSVG; };
 
         if (hasMultiple) {
+            const thumbLabel = currentLang === 'es' ? 'Miniatura' : 'Thumbnail';
             images.forEach((imgUrl, idx) => {
                 const thumb = document.createElement('img');
                 thumb.src = imgUrl;
                 thumb.className = `thumb-item ${idx === currentImageIndex ? 'active' : ''}`;
-                thumb.alt = `Miniatura ${idx + 1}`;
+                thumb.alt = `${thumbLabel} ${idx + 1}`;
                 thumb.addEventListener('click', (e) => {
                     e.stopPropagation();
                     currentImageIndex = idx;

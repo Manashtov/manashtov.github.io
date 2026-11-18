@@ -4,12 +4,13 @@ https://manashtov.github.io/
 
  Manuel "Manashtov" Calderón Portafolio
 
-4 proyectos grandes completos:
+5 proyectos grandes completos:
 
 - ComparaCL: web scrapper  API REST
 - CLZip: gestor archivos - exclusivamente Python + hooks nativos + Powershell + Innosetup6
 - MouseHub: Remapeador de botones para mice genéricos - Exclusivamente en Python + hooks nativo (mice es mouse en plural xd)
 - Presupuestalo: Proyecto para crear presupuestos para pymes y pequeños freelancers
+- Controlalo: Proyecto para registrar, visualizar y controlar ingresos, gastos y transacciones recurrentes de una pyme
 
 3 proyectos menores:
 

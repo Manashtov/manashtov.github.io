@@ -1,12 +1,28 @@
 const projectsData = [
     {
+        id: 8,
+        title: "Controlalo",
+        description: {
+            es: "Sistema de gestión financiera de escritorio para registrar, visualizar y controlar ingresos, gastos y transacciones recurrentes de una pyme. Incluye paneles financieros interactivos, seguimiento por categorías personalizables y respaldos cifrados.",
+            en: "Desktop financial management system to record, visualise, and control income, expenses, and recurring transactions for SMEs. Features interactive financial dashboards, customisable category tracking, and encrypted backups."
+        },
+        tech: ["Python", "PyQt6", "QtAwesome", "AES-256", "SQLite"],
+        link: "#",
+        images: [
+            "assets/projects/controlalo/1.png",
+            "assets/projects/controlalo/2.png",
+            "assets/projects/controlalo/3.png"
+        ],
+        status: { es: "Completado", en: "Completed" }
+    },
+    {
         id: 7,
         title: "Presupuestalo",
         description: {
             es: "Aplicación de escritorio para crear, calcular y emitir cotizaciones comerciales profesionales de forma autónoma y sin conexión a internet. Con generación de documentos PDF y códigos QR de verificación instantánea. Soporta múltiples monedas, temas claro/oscuro y exportación a planilla Excel.",
-            en: "Desktop application to create, calculate, and issue professional commercial quotes completely offline. Features PDF document generation and instant QR code verification. Supports multiple currencies, light/dark themes, and Excel export."
+            en: "Desktop application to create, calculate, and issue professional commercial quotes completely offline. Features PDF document generation and instant QR code verification. Supports multiple currencies, light/dark themes, and Excel spreadsheet export."
         },
-        tech: ["Python", "PySide6", "QAwesome"],
+        tech: ["Python", "PySide6", "QtAwesome"],
         link: "#",
         images: [
             "assets/projects/presupuestalo/1.png",
@@ -20,9 +36,9 @@ const projectsData = [
         title: "ComparaCL",
         description: {
             es: "Plataforma web scraper para cotizar y comparar precios de hardware y componentes de PC en Chile. Automatiza la extracción de datos de múltiples tiendas, normalizando la información para servirla a través de una API REST propia hacia una interfaz moderna, categorizada y con filtros avanzados.",
-            en: "Web scraper platform to quote and compare PC hardware prices in Chile. Automates data extraction from multiple stores, normalizing information to serve it via a custom REST API to a modern, categorized interface with advanced filters."
+            en: "Web scraper platform to quote and compare PC hardware prices in Chile. Automates data extraction from multiple stores, normalising information to serve it via a custom REST API to a modern, categorised interface with advanced filters."
         },
-        tech: ["Python", "Flask", "Web Scraping", "JavaScript ES6+", "Tailwind CSS", "API REST", "CI/CD", "GitHub Actions"],
+        tech: ["Python", "Flask", "Web Scraping", "JavaScript ES6+", "Tailwind CSS", "REST API", "CI/CD", "GitHub Actions"],
         link: "#",
         images: [
             "assets/projects/compara/1.png",
@@ -55,7 +71,10 @@ const projectsData = [
             es: "Software de escritorio que emula la funcionalidad de Logitech G Hub para ratones genéricos. Permite el mapeo avanzado de botones, perfiles por aplicación y macros.",
             en: "Desktop software emulating Logitech G Hub functionality for generic mice. Allows advanced button mapping, per-application profiles, and macro execution."
         },
-        tech: ["Python", "PyQt6", "pynput", "pywin32", "Hooks Nativos"],
+        tech: {
+            es: ["Python", "PyQt6", "pynput", "pywin32", "Hooks Nativos"],
+            en: ["Python", "PyQt6", "pynput", "pywin32", "Native Hooks"]
+        },
         link: "#",
         images: [
             "assets/projects/mousehub/mouse 1.png",
@@ -99,7 +118,10 @@ const projectsData = [
     },
     {
         id: 4,
-        title: "Conversor de Temperatura",
+        title: {
+            es: "Conversor de Temperatura",
+            en: "Temperature Converter"
+        },
         description: {
             es: "Aplicación móvil rápida y eficiente para la conversión instantánea entre diversas escalas térmicas (Celsius, Fahrenheit, Kelvin y Rankine).",
             en: "Fast and efficient mobile application for instant conversion between various thermal scales (Celsius, Fahrenheit, Kelvin, and Rankine)."

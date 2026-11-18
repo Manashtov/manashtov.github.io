@@ -56,7 +56,7 @@
             <h1 class="hero-title">Manuel Calderón.</h1>
             <h2 class="hero-subtitle" data-i18n="hero_subtitle">Construyo soluciones de software robustas.</h2>
             <p class="hero-bio" data-i18n="hero_bio">
-                Analista programador especializado en automatización con Python, con certificación de Google. Construyo software de escritorio, aplicaciones móviles, proyectos con IA y pipelines CI/CD.
+                Analista programador especializado en automatización con Python e Inteligencia Artificial, con certificaciones de Google. Construyo software de escritorio, aplicaciones móviles, proyectos con IA y pipelines CI/CD.
             </p>
             <div class="hero-actions">
                 <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_projects">Ver mis proyectos</a>
@@ -69,7 +69,7 @@
             <h2 class="section-title" data-i18n="about_title">Sobre mí</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p data-i18n="about_p1">Soy Manuel <strong>"Manashtov"</strong> Calderón, Analista Programador titulado de Duoc UC (2025) y certificado por Google en IT Automation with Python (2026).</p>
+                    <p data-i18n="about_p1">Soy Manuel <strong>"Manashtov"</strong> Calderón, Analista Programador titulado de Duoc UC (2025) y certificado por Google en IT Automation with Python y Google AI Essentials (2026).</p>
                     <p data-i18n="about_p2">Me especializo en automatización con Python, desarrollo de software de escritorio por capas, aplicaciones móviles y proyectos de automatización. Implemento despliegue Continuo (CI/CD) usando GitHub Actions para asegurar entregas confiables. Me obsesiona la arquitectura limpia y resolver problemas reales con tecnología.</p>
                     
                     <h3 id="certifications" class="subsection-title" data-i18n="about_edu_title">Educación y Certificaciones</h3>
@@ -113,6 +113,7 @@
                     </div>
                     <ul class="skill-pill-list">
                         <li class="skill-pill">Python</li>
+                        <li class="skill-pill">PyQt6 / PySide6</li>
                         <li class="skill-pill">Flask</li>
                         <li class="skill-pill">Django</li>
                         <li class="skill-pill">SQL</li>
@@ -169,9 +170,9 @@
                         <h3 data-i18n="skills_cat_integrations">Integraciones</h3>
                     </div>
                     <ul class="skill-pill-list">
-                        <li class="skill-pill">Cifrado AES-256</li>
+                        <li class="skill-pill" data-i18n="skill_aes">Cifrado AES-256</li>
                         <li class="skill-pill">I18n</li>
-                        <li class="skill-pill">validación SHA-256</li>
+                        <li class="skill-pill" data-i18n="skill_sha">Validación SHA-256</li>
                     </ul>
                 </div>
             </div>
@@ -214,7 +215,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
     </button>
 
-    <div id="toast" class="toast hidden" aria-live="polite" aria-atomic="true">✓ Email copiado al portapapeles</div>
+    <div id="toast" class="toast" aria-live="polite" aria-atomic="true">✓ Email copiado al portapapeles</div>
 
     <dialog id="project-modal" class="modal">
         <div class="modal-content">
@@ -225,7 +226,7 @@
                         <button id="gal-prev" class="gallery-arrow arrow-left" aria-label="Imagen anterior">‹</button>
                         <div class="gallery-img-container" title="Haz clic para ver en pantalla completa">
                             <img id="modal-img" src="" alt="Captura del proyecto" class="modal-image">
-                            <span class="zoom-badge">🔍 Ampliar</span>
+                            <span class="zoom-badge" data-i18n="modal_zoom">🔍 Ampliar</span>
                         </div>
                         <button id="gal-next" class="gallery-arrow arrow-right" aria-label="Siguiente imagen">›</button>
                     </div>

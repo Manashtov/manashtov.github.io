@@ -1,4 +1,20 @@
 const projectsData = [
+{
+        id: 9,
+        title: "Rima",
+        description: {
+            es: "Sintetizador wavetable centrado en la música urbana",
+            en: "Wavetable Synthesizer for Urban Music"
+        },
+        tech: ["Rust", "Next.js", "React", "Tailwind CSS", "Supabase", "Python", "Flask"],
+        link: "#",
+        images: [
+            "assets/projects/rima/1.png",
+            "assets/projects/rima/2.png",
+            "assets/projects/rima/3.png"
+        ],
+        status: { es: "En construcción", en: "in progress" }
+    },
     {
         id: 8,
         title: "Controlalo",

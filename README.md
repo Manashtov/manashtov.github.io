@@ -18,5 +18,8 @@ https://manashtov.github.io/
 - Conver6: conversor de documentos y archivos de audio
 - Conversor de temperaturas (Ionic + vuejs + Typescript)
 
+1 Proyecto en Construcción
+- Rima Sintetizdor de música urbana
+
 link: 
 https://manashtov.github.io/

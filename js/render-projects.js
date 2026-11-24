@@ -70,6 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const images = getProjectImages(project);
             const coverSrc = images.length > 0 ? images[0] : fallbackSVG;
 
+            const fullDesc = project.description[currentLang];
+            const shortDesc = fullDesc.length > 85 ? fullDesc.substring(0, 85) + '...' : fullDesc;
+
             const card = document.createElement('article');
             card.className = cardClass;
             card.style.userSelect = "none";
@@ -81,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">${titleText}</h3>
-                    <p class="project-desc">${project.description[currentLang].substring(0, 85)}...</p>
+                    <p class="project-desc">${shortDesc}</p>
                     <div class="chips-container">${techChips}</div>
                 </div>
             `;

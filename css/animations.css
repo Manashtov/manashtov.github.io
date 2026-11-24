@@ -1,23 +1,99 @@
-/* Cursor parpadeante para el logo */
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
 
-/* Clases de utilidad para IntersectionObserver */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 }
 
-/* Cuando el JS detecta que está en pantalla, añade esta clase */
+/* ============================================================
+   REVEAL ON SCROLL (activado por IntersectionObserver vía .visible)
+   ============================================================ */
+.fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(6px);
+    transition:
+        opacity var(--transition-slow),
+        transform var(--transition-slow),
+        filter var(--transition-slow);
+    will-change: opacity, transform;
+}
+
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+    filter: blur(0);
 }
 
-/* Helper para esconder elementos como SVGs que cambian por tema */
+/* Entrada escalonada para grids de tarjetas (skills + projects) */
+.fade-in.visible .skills-grid .skill-category-card,
+.fade-in.visible .projects-grid .project-card {
+    animation: card-in var(--transition-slow) backwards;
+}
+
+.fade-in.visible .projects-grid .project-card:nth-child(1) { animation-delay: 0.05s; }
+.fade-in.visible .projects-grid .project-card:nth-child(2) { animation-delay: 0.12s; }
+.fade-in.visible .projects-grid .project-card:nth-child(3) { animation-delay: 0.19s; }
+.fade-in.visible .projects-grid .project-card:nth-child(4) { animation-delay: 0.26s; }
+.fade-in.visible .projects-grid .project-card:nth-child(5) { animation-delay: 0.33s; }
+.fade-in.visible .projects-grid .project-card:nth-child(6) { animation-delay: 0.40s; }
+.fade-in.visible .projects-grid .project-card:nth-child(7) { animation-delay: 0.47s; }
+.fade-in.visible .projects-grid .project-card:nth-child(8) { animation-delay: 0.54s; }
+.fade-in.visible .projects-grid .project-card:nth-child(9) { animation-delay: 0.61s; }
+
+.fade-in.visible .skills-grid .skill-category-card:nth-child(1) { animation-delay: 0.05s; }
+.fade-in.visible .skills-grid .skill-category-card:nth-child(2) { animation-delay: 0.12s; }
+.fade-in.visible .skills-grid .skill-category-card:nth-child(3) { animation-delay: 0.19s; }
+.fade-in.visible .skills-grid .skill-category-card:nth-child(4) { animation-delay: 0.26s; }
+.fade-in.visible .skills-grid .skill-category-card:nth-child(5) { animation-delay: 0.33s; }
+
+@keyframes card-in {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ============================================================
+   UTILIDADES
+   ============================================================ */
 .hidden {
     display: none !important;
+}
+
+/* ============================================================
+   ACCESIBILIDAD — Respeta prefers-reduced-motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-delay: 0s !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        transition-delay: 0s !important;
+        scroll-behavior: auto !important;
+    }
+
+    .fade-in {
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+
+    .hero-title,
+    .section-title::after {
+        animation: none !important;
+    }
 }

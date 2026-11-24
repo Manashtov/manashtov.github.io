@@ -1,4 +1,9 @@
-*, *::before, *::after {
+/* ============================================================
+   RESET MODERNO
+   ============================================================ */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -6,17 +11,30 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     font-family: var(--font-sans);
-    line-height: 1.6;
-    transition: background-color var(--transition-normal), color var(--transition-normal);
+    font-size: var(--fs-base);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    transition:
+        background-color var(--transition-normal),
+        color var(--transition-normal);
     overflow-x: hidden;
     position: relative;
+    min-height: 100vh;
 }
 
 /* Canvas de Nieve en el Background */
@@ -28,24 +46,35 @@ body {
     height: 100vh;
     pointer-events: none;
     z-index: 0;
+    opacity: 0.9;
 }
 
 /* Asegurar que el contenido esté sobre el efecto de nieve */
-main, .footer {
+main,
+.footer {
     position: relative;
     z-index: 1;
 }
 
-/* Compensación de altura del navbar fijo al hacer scroll hacia secciones o certificados */
-section, #certifications {
+/* Compensación de altura del navbar fijo al hacer scroll */
+section,
+#certifications {
     scroll-margin-top: calc(var(--nav-height) + 1.5rem);
 }
 
-/* Tipografía Base */
+/* ============================================================
+   TIPOGRAFÍA BASE
+   ============================================================ */
 h1, h2, h3, h4 {
-    font-weight: 700;
-    line-height: 1.2;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
     color: var(--text-primary);
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
 }
 
 a {
@@ -70,8 +99,11 @@ main {
     padding: 0 var(--spacing-sm);
 }
 
+/* ============================================================
+   TÍTULOS DE SECCIÓN
+   ============================================================ */
 .section-title {
-    font-size: 2rem;
+    font-size: var(--fs-xl);
     margin-bottom: var(--spacing-md);
     position: relative;
     display: inline-block;
@@ -84,8 +116,10 @@ main {
     left: 0;
     width: 60px;
     height: 4px;
-    background-color: var(--accent-primary);
-    border-radius: var(--radius-sm);
+    background: var(--gradient-brand);
+    background-size: 200% 100%;
+    border-radius: var(--radius-pill);
+    animation: gradient-shift 4s var(--ease-in-out) infinite;
 }
 
 .no-scroll {

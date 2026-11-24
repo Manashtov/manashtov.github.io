@@ -1,0 +1,82 @@
+/* ============================================================
+   TOAST
+   ============================================================ */
+.toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(12px);
+    background-color: var(--accent-primary);
+    color: #fff;
+    padding: 0.7rem 1.3rem;
+    border-radius: var(--radius-pill);
+    font-weight: 700;
+    font-size: var(--fs-sm);
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity var(--transition-normal),
+        transform var(--transition-normal),
+        visibility var(--transition-normal);
+    text-align: center;
+    white-space: nowrap;
+    max-width: 90vw;
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ============================================================
+   SCROLL TOP
+   ============================================================ */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: var(--accent-primary);
+    color: #fff;
+    border: none;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 90;
+    transition:
+        transform var(--transition-fast),
+        background-color var(--transition-fast),
+        opacity var(--transition-normal),
+        box-shadow var(--transition-fast);
+}
+
+.scroll-top-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-glow);
+}
+
+.scroll-top-btn:active {
+    transform: translateY(-1px) scale(0.94);
+}
+
+.scroll-top-btn.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+/* ============================================================
+   MISC
+   ============================================================ */
+/* Correos electrónicos más grandes en el footer */
+.email-large {
+    font-size: var(--fs-lg) !important;
+}

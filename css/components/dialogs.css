@@ -1,6 +1,4 @@
-/* ============================================================
-   MODAL (DIÁLOGO NATIVO)
-   ============================================================ */
+/* MODAL (DIÁLOGO NATIVO) */
 .modal {
     border: none;
     background: transparent;
@@ -259,9 +257,7 @@
     transform: translateX(2px);
 }
 
-/* ============================================================
-   LIGHTBOX
-   ============================================================ */
+/* LIGHTBOX */
 .lightbox {
     border: none;
     background: transparent;
@@ -388,9 +384,7 @@
 .lightbox-arrow.left { left: -65px; }
 .lightbox-arrow.right { right: -65px; }
 
-/* ============================================================
-   RESPONSIVE (DIÁLOGOS)
-   ============================================================ */
+/* RESPONSIVE (DIÁLOGOS) */
 @media (max-width: 480px) {
     .modal-content {
         padding: 1.1rem;

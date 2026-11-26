@@ -1,7 +1,5 @@
 :root {
-    /* ============================================================
-       PALETA — Modo Oscuro (por defecto) · OKLCH para consistencia
-       ============================================================ */
+    /* PALETA — Modo Oscuro (por defecto) · OKLCH para consistencia */
     --bg-color: oklch(0.18 0.035 250);
     --surface-color: oklch(0.255 0.055 250);
     --surface-hover: oklch(0.36 0.075 250);
@@ -23,9 +21,7 @@
         var(--accent-primary) 100%
     );
 
-    /* ============================================================
-       TIPOGRAFÍA
-       ============================================================ */
+    /* TIPOGRAFÍA */
     --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-mono: "Fira Code", "Cascadia Code", "Courier New", monospace;
 
@@ -38,9 +34,7 @@
     --fs-2xl: clamp(1.9rem, 1.4rem + 2.4vw, 3rem);
     --fs-3xl: clamp(2.4rem, 1.5rem + 4.5vw, 4.4rem);
 
-    /* ============================================================
-       LAYOUT
-       ============================================================ */
+    /* LAYOUT */
     --max-width: 1100px;
     --nav-height: 80px;
     --spacing-xs: 0.5rem;
@@ -49,17 +43,13 @@
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
 
-    /* ============================================================
-       BORDES Y RADIOS
-       ============================================================ */
+    /* BORDES Y RADIOS */
     --radius-sm: 6px;
     --radius-md: 10px;
     --radius-lg: 18px;
     --radius-pill: 999px;
 
-    /* ============================================================
-       SOMBRAS EN CAPAS (más profundas y realistas)
-       ============================================================ */
+    /* SOMBRAS EN CAPAS (más profundas y realistas) */
     --shadow-xs: 0 1px 2px oklch(0.1 0.02 250 / 0.18);
     --shadow-sm:
         0 1px 2px oklch(0.1 0.02 250 / 0.16),
@@ -76,9 +66,7 @@
     --shadow-soft: var(--shadow-md);
     --shadow-hover: var(--shadow-glow);
 
-    /* ============================================================
-       MOVIMIENTO — Easings y duraciones profesionales
-       ============================================================ */
+    /* MOVIMIENTO — Easings y duraciones profesionales */
     --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
     --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);

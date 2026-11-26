@@ -1,7 +1,5 @@
 [data-theme="light"] {
-    /* ------------------------------------------------------------
-       Inversión de paleta para modo claro · OKLCH
-       ------------------------------------------------------------ */
+    /* Inversión de paleta para modo claro · OKLCH */
     --bg-color: oklch(0.975 0.006 250);
     --surface-color: oklch(1 0 0);
     --surface-hover: oklch(0.95 0.012 250);

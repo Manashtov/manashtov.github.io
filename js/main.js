@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.classList.remove('active');
         navMenu.classList.remove('active');
         navOverlay.classList.remove('active');
-        document.body.classList.remove('no-scroll');
+        set_body_scroll(false);
     }
 
     if (menuToggle && navMenu && navOverlay) {
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const isOpen = navMenu.classList.toggle('active');
             menuToggle.classList.toggle('active', isOpen);
             navOverlay.classList.toggle('active', isOpen);
-            document.body.classList.toggle('no-scroll', isOpen);
+            set_body_scroll(isOpen);
         });
 
         navOverlay.addEventListener('click', closeMobileMenu);

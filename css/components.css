@@ -1,8 +1,4 @@
-/* ============================================================
-   components.css — Manifiesto de componentes
-   Refactorizado en módulos bajo css/components/.
-   Los @import deben ir al inicio del archivo (regla CSS).
-   ============================================================ */
+/* components.css — Manifiesto de componentes (módulos en css/components/). */
 @import url("components/buttons.css");
 @import url("components/chips.css");
 @import url("components/cards.css");

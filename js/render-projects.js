@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let currentProjectIndex = 0;
     let currentImageIndex = 0;
-    let currentLang = document.documentElement.lang || 'es';
+    let currentLang = get_current_lang();
 
     function getFallbackSVG() {
         const text = currentLang === 'es' ? 'Sin imagen' : 'No image';
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateGalleryView(p);
         
-        document.body.classList.add('no-scroll');
+        set_body_scroll(true);
         if (!modal.open) modal.showModal();
     }
 
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.close(); });
 
     modalClose.addEventListener('click', () => modal.close());
-    modal.addEventListener('close', () => document.body.classList.remove('no-scroll'));
+    modal.addEventListener('close', () => set_body_scroll(false));
     modal.addEventListener('click', (e) => { if (e.target === modal) modal.close(); });
     
     document.getElementById('modal-prev').addEventListener('click', () => {

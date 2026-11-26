@@ -1,6 +1,4 @@
-/* ============================================================
-   RESET MODERNO
-   ============================================================ */
+/* RESET MODERNO */
 *,
 *::before,
 *::after {
@@ -62,9 +60,7 @@ section,
     scroll-margin-top: calc(var(--nav-height) + 1.5rem);
 }
 
-/* ============================================================
-   TIPOGRAFÍA BASE
-   ============================================================ */
+/* TIPOGRAFÍA BASE */
 h1, h2, h3, h4 {
     font-weight: 800;
     line-height: 1.15;
@@ -99,9 +95,7 @@ main {
     padding: 0 var(--spacing-sm);
 }
 
-/* ============================================================
-   TÍTULOS DE SECCIÓN
-   ============================================================ */
+/* TÍTULOS DE SECCIÓN */
 .section-title {
     font-size: var(--fs-xl);
     margin-bottom: var(--spacing-md);

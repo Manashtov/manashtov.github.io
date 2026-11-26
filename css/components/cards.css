@@ -1,6 +1,4 @@
-/* ============================================================
-   TARJETAS DE PROYECTO
-   ============================================================ */
+/* TARJETAS DE PROYECTO */
 .project-card {
     background-color: var(--surface-color);
     border: 1px solid var(--border-color);
@@ -84,9 +82,7 @@
     opacity: 0.75;
 }
 
-/* ============================================================
-   INTRO DE PROYECTOS
-   ============================================================ */
+/* INTRO DE PROYECTOS */
 .projects-intro {
     font-size: var(--fs-lg);
     color: var(--text-secondary);

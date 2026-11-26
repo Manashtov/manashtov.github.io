@@ -1,6 +1,4 @@
-/* ============================================================
-   TOAST
-   ============================================================ */
+/* TOAST */
 .toast {
     position: fixed;
     bottom: 24px;
@@ -31,9 +29,7 @@
     transform: translateX(-50%) translateY(0);
 }
 
-/* ============================================================
-   SCROLL TOP
-   ============================================================ */
+/* SCROLL TOP */
 .scroll-top-btn {
     position: fixed;
     bottom: 20px;
@@ -73,9 +69,7 @@
     pointer-events: none;
 }
 
-/* ============================================================
-   MISC
-   ============================================================ */
+/* MISC */
 /* Correos electrónicos más grandes en el footer */
 .email-large {
     font-size: var(--fs-lg) !important;

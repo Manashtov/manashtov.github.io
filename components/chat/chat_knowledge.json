@@ -1,0 +1,70 @@
+[
+  {
+    "keywords": ["hola", "buenas", "hey", "hi", "hello", "saludos"],
+    "response": "¡Hola! Soy el asistente del portafolio de Manuel Calderón. ¿En qué puedo ayudarte?"
+  },
+  {
+    "keywords": ["proyecto", "trabajo", "hecho", "portfolio", "portafolio", "proyectos"],
+    "response": "He desarrollado 9 proyectos: CLZip (compresión), Controlalo (finanzas PyQt6), Presupuestalo (cotizaciones), ComparaCL (scraper hardware), Conver6 (conversor multimedia), MouseHub (emulador G Hub), Lira Converter (divisas Ionic), Temp Converter (temperatura Ionic) y Rima (sintetizador Rust/Next.js)."
+  },
+  {
+    "keywords": ["clzip", "compresion", "compresión", "archivador", "peaZip"],
+    "response": "CLZip es mi herramienta de compresión multiplataforma open source, alternativa a PeaZip. Usa Python, PyQt6, arquitectura por capas e instalador Inno Setup. Repo: github.com/Manashtov/CLZip"
+  },
+  {
+    "keywords": ["controlalo", "finanzas", "financiera", "pyqt6", "escritorio", "gastos", "ingresos"],
+    "response": "Controlalo es un sistema de gestión financiera de escritorio para pymes: registra ingresos/gastos, paneles interactivos, categorías personalizables y respaldos cifrados AES-256. Tech: Python, PyQt6, SQLite."
+  },
+  {
+    "keywords": ["presupuestalo", "cotizaciones", "cotizar", "presupuestos", "pdf", "qr", "pyside6"],
+    "response": "Presupuestalo crea cotizaciones profesionales offline, genera PDF con QR de verificación, multi-moneda, temas claro/oscuro y exporta a Excel. Tech: Python, PySide6."
+  },
+  {
+    "keywords": ["compara", "comparaCL", "scraper", "hardware", "precios", "chile", "flask", "api", "rest"],
+    "response": "ComparaCL es un scraper que compara precios de hardware en Chile: extrae datos de múltiples tiendas, normaliza y sirve vía API REST propia con interfaz moderna y filtros. Tech: Python, Flask, JS, Tailwind, GitHub Actions."
+  },
+  {
+    "keywords": ["conver6", "conversor", "audio", "imagen", "ffmpeg", "pydub", "pillow"],
+    "response": "Conver6 convierte audio/imagen entre múltiples formatos con pipeline desacoplado de la UI. Tech: Python, PyQt6, pydub, Pillow, FFmpeg, CI/CD con GitHub Actions. Repo: github.com/Manashtov/conver6"
+  },
+  {
+    "keywords": ["mousehub", "mouse", "ratón", "logitech", "ghub", "macros", "mapeo"],
+    "response": "MouseHub emula Logitech G Hub para ratones genéricos: mapeo avanzado de botones, perfiles por app y macros. Tech: Python, PyQt6, pynput, pywin32, hooks nativos de Windows."
+  },
+  {
+    "keywords": ["lira", "divisas", "monedas", "conversor", "ionic", "vue", "typescript", "movil", "móvil"],
+    "response": "Lira Converter es app móvil de conversión de divisas en tiempo real con ExchangeRate-API. Tech: Ionic, Vue.js, TypeScript, REST API. También hice Temp Converter (Celsius/Fahrenheit/Kelvin/Rankine) con Ionic."
+  },
+  {
+    "keywords": ["rima", "sintetizador", "wavetable", "rust", "nextjs", "react", "supabase", "musica", "música", "urbana"],
+    "response": "Rima es un sintetizador wavetable para música urbana (en construcción). Tech: Rust, Next.js, React, Tailwind, Supabase, Python/Flask backend."
+  },
+  {
+    "keywords": ["tecnologia", "tecnologías", "stack", "herramientas", "skills", "lenguajes", "que sabes", "qué sabes"],
+    "response": "Backend: Python, PyQt6/PySide6, Flask, Django, SQL, APIs REST. Frontend/Mobile: Ionic, Vue.js, TypeScript, JS ES6+, HTML5, CSS3. IA: Gemini, Claude, DeepSeek. DevOps: GitHub Actions, CI/CD, Git, arquitectura por capas. Seguridad: AES-256, SHA-256, I18n."
+  },
+  {
+    "keywords": ["python", "pyqt", "pyside", "flask", "django", "backend", "escritorio"],
+    "response": "Mi fuerte es Python: desarrollo de escritorio con PyQt6/PySide6 (arquitectura por capas), APIs con Flask/Django, scraping, automatización, CI/CD. Certificado Google IT Automation with Python."
+  },
+  {
+    "keywords": ["ionic", "vue", "typescript", "frontend", "movil", "móvil", "app", "aplicacion", "aplicación"],
+    "response": "Desarrollo apps móviles con Ionic + Vue.js + TypeScript: Lira Converter (divisas) y Temp Converter (temperaturas). Consumo de APIs REST, UI reactiva, multiplataforma."
+  },
+  {
+    "keywords": ["contacto", "email", "correo", "telefono", "teléfono", "linkedin", "github", "redes", "contactar"],
+    "response": "Emails: mana.calderon@protonmail.com y manashtov@protonmail.com. Tel: 🇨🇱 +56 9 XXXX XXXX. GitHub: github.com/Manashtov. LinkedIn en el footer. ¡Escríbeme!"
+  },
+  {
+    "keywords": ["formacion", "formación", "estudios", "educacion", "educación", "titulo", "titulado", "duoc", "certificado", "google", "certificacion", "certificación"],
+    "response": "Analista Programador titulado en Duoc UC (2025). Certificaciones Google: IT Automation with Python (2026) y AI Essentials (2026). Verificables en Coursera."
+  },
+  {
+    "keywords": ["experiencia", "trayectoria", "carrera", "analista", "programador", "especializado", "automatizacion", "automatización"],
+    "response": "Especialista en automatización con Python e IA. Construyo software de escritorio por capas, apps móviles, proyectos con IA y pipelines CI/CD. Me obsesiona arquitectura limpia y resolver problemas reales."
+  },
+  {
+    "keywords": ["que puedes hacer", "qué haces", "quien eres", "quién eres", "sobre ti", "acerca de", "ayuda", "ayudar"],
+    "response": "Soy tu asistente del portafolio. Puedo contarte sobre: proyectos (CLZip, Controlalo, etc.), tecnologías (Python, Ionic, Rust...), contacto (email, GitHub), formación (Duoc UC, Google certs) y mi experiencia. ¡Pregúntame!"
+  }
+]

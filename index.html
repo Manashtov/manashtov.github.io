@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/sections.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="components/chat/chat_widget.css">
+    <link rel="stylesheet" href="components/hero/hero_section.css">
 </head>
 <body>
     <canvas id="snow-canvas" aria-hidden="true"></canvas>
@@ -51,19 +53,7 @@
     <div id="nav-overlay" class="nav-overlay"></div>
 
     <main>
-        <section id="hero" class="hero-section fade-in">
-            <p class="greeting" data-i18n="hero_greeting">Hola, mi nombre es</p>
-            <h1 class="hero-title">Manuel Calderón.</h1>
-            <h2 class="hero-subtitle" data-i18n="hero_subtitle">Construyo soluciones de software robustas.</h2>
-            <p class="hero-bio" data-i18n="hero_bio">
-                Analista programador especializado en automatización con Python e Inteligencia Artificial, con certificaciones de Google. Construyo software de escritorio, aplicaciones móviles, proyectos con IA y pipelines CI/CD.
-            </p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_projects">Ver mis proyectos</a>
-                <a href="https://github.com/Manashtov" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="hero_btn_github">Visitar GitHub</a>
-                <a href="#certifications" class="btn btn-primary" data-i18n="hero_btn_certs">Certificados de Google</a>
-            </div>
-        </section>
+        <section id="hero" class="hero-section fade-in"></section>
 
         <section id="about" class="about-section fade-in">
             <h2 class="section-title" data-i18n="about_title">Sobre mí</h2>
@@ -256,12 +246,18 @@
         </div>
     </dialog>
 
+    <script defer src="components/hero/hero_section.js"></script>
     <script defer src="js/i18n.js"></script>
+    <script defer src="utils/dom-utils.js"></script>
+    <script defer src="utils/i18n-utils.js"></script>
     <script defer src="js/projects-data.js"></script>
     <script defer src="js/render-projects.js"></script>
     <script defer src="js/theme-toggle.js"></script>
     <script defer src="js/scroll-effects.js"></script>
     <script defer src="js/email-copy.js"></script>
     <script defer src="js/main.js"></script>
+    <script defer src="components/chat/chat_knowledge.js"></script>
+    <script defer src="components/chat/chat_widget.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function(){ if (typeof init_chat_widget === 'function') init_chat_widget(); });</script>
 </body>
 </html>

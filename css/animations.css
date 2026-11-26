@@ -1,6 +1,4 @@
-/* ============================================================
-   KEYFRAMES
-   ============================================================ */
+/* KEYFRAMES */
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
@@ -11,9 +9,7 @@
     50% { background-position: 100% 50%; }
 }
 
-/* ============================================================
-   REVEAL ON SCROLL (activado por IntersectionObserver vía .visible)
-   ============================================================ */
+/* REVEAL ON SCROLL (activado por IntersectionObserver vía .visible) */
 .fade-in {
     opacity: 0;
     transform: translateY(28px);
@@ -64,16 +60,12 @@
     }
 }
 
-/* ============================================================
-   UTILIDADES
-   ============================================================ */
+/* UTILIDADES */
 .hidden {
     display: none !important;
 }
 
-/* ============================================================
-   ACCESIBILIDAD — Respeta prefers-reduced-motion
-   ============================================================ */
+/* ACCESIBILIDAD — Respeta prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,

@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(toastTimeout) clearTimeout(toastTimeout);
         
         // Obtener texto traducido
-        const lang = document.documentElement.lang || 'es';
+        const lang = get_current_lang();
         const msg = lang === 'es' ? "✓ Email copiado al portapapeles" : "✓ Email copied to clipboard";
         toast.textContent = msg;
 

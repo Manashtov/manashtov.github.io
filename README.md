@@ -12,8 +12,9 @@ https://manashtov.github.io/
 - Presupuestalo: Proyecto para crear presupuestos para pymes y pequeños freelancers
 - Controlalo: Proyecto para registrar, visualizar y controlar ingresos, gastos y transacciones recurrentes de una pyme
 
-3 proyectos menores:
+4 proyectos menores:
 
+- Bots para páginas web (Integrado en mi web)
 - Lira converter: Coversor de divisas a tiempo real + API REST
 - Conver6: conversor de documentos y archivos de audio
 - Conversor de temperaturas (Ionic + vuejs + Typescript)
